@@ -7,7 +7,7 @@ import logging
 # use custom logger
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
-filehandler = logging.FileHandler("logs/file_delete_record.log")    # location for log file
+filehandler = logging.FileHandler(pathlib.Path("logs", "file_delete_record.log"))    # location for log file
 logger.addHandler(filehandler)
 formatter = logging.Formatter("%(asctime)s : %(levelname)s : %(message)s : %(name)s")   # log message format
 filehandler.setFormatter(formatter)
